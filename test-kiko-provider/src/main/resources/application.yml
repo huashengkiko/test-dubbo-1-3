@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: test-kiko
+  profiles:
+    active: local
+  dubbo:
+    application:
+      name: test-kiko
+    protocol:
+      name: dubbo
+      port: 20880
+    consumer:
+      check: false
+    registry:
+      check: false
+swagger:
+  base-package: kiko-yuri.controller
+  info:
+    title: test-kiko
+server:
+  port: 8080
+logging:
+  file: 'logs/${spring.application.name}.log'
